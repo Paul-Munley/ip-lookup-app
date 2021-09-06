@@ -16,7 +16,7 @@ app.get("/connected", (req, res) => {
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // NODE SERVE THE FILES FOR OUR BUILT REACT APP
-app.use(express.static(path.resolve(__dirname, "../client/build")));
+app.use(express.static(path.resolve(__dirname, "client/build")));
 
 // QUERY BY IP ADDRESS
 app.get("/search/:id", async (req, res) => {
@@ -49,5 +49,5 @@ app.get("/search/:id", async (req, res) => {
 
 // ALL GET REQUESTS THAT ARENT HANDLED PRIOR WILL RETURN OUR REACT APP (not fully sure what this is yet)
 app.get("*", (req, res) => {
-	res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+	res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
 });
