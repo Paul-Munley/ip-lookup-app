@@ -6,14 +6,14 @@ const port = process.env.PORT || 5000;
 
 const API_KEY = "51955fafeamsh0acdefdd102d0f2p19d94ajsna697f5f0555a";
 
-// Console log that server is running
-// app.listen(port, () => console.log(`Listening on port ${port}`));
-
 // GET request to show established connection
-// app.get("/connected", (req, res) => {
-// 	// console.log("hello");
-// 	res.send({ express: "YOUR EXPRESS BACKEND IS CONNECTED TO REACT" });
-// });
+app.get("/connected", (req, res) => {
+	// console.log("hello");
+	res.send({ express: "YOUR EXPRESS BACKEND IS CONNECTED TO REACT" });
+});
+
+// Console log that server is running
+app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // NODE SERVE THE FILES FOR OUR BUILT REACT APP
 app.use(express.static(path.resolve(__dirname, "../client/build")));
