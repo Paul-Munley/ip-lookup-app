@@ -1,0 +1,17 @@
+.search {
+	height: 40vh;
+	font-size: 1.6rem;
+	background-size: cover;
+	background-position: -2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.searchInstructions {
+	margin-bottom: 2.4rem;
+}
+
+.searchForm {
+}

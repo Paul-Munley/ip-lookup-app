@@ -1,0 +1,36 @@
+.resultGroup {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	/* grid-template-rows: auto 1fr; */
+	/* width: 40rem;
+	min-width: max-content; */
+	min-width: 60rem;
+	transform: translateX(4.5rem);
+	justify-items: start;
+}
+
+.countryFlagGroup {
+	display: flex;
+	align-items: center;
+}
+
+.countryFlagGroup div {
+	margin-right: 1.5rem;
+}
+
+.resultLabel {
+	/* margin-right: 3rem; */
+	/* justify-self: start; */
+}
+
+@media only screen and (max-width: 40.63em) {
+	.resultGroup {
+		display: flex;
+		width: fit-content;
+	}
+
+	.resultLabel {
+		width: 10rem;
+		margin-right: 2rem;
+	}
+}
